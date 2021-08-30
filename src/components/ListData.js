@@ -14,8 +14,8 @@ const ListData = () => {
     }, [])
 
     return (
-        <div>
-            <h3>Astronomy Picture</h3>            
+        <div id= "listdata">
+            <h3 className= "judullist">Astronomy Picture</h3>            
             {nasa.map((items,index) => (
                 <div key={index}>
                     <img src={items.url} width="150px" alt="NASA"/>
