@@ -2,37 +2,35 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#listdata {
+  background-image: url(./components/img/sampul1.png);
+  padding-left: 30px;
+  font-family: "Times New Roman", Times, serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.judullist {
+  text-align: center;
+  font-family: Copperlate, fantasy;
+  padding-bottom: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#profile {
+  padding-left: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.judul2 {
+  text-align: center;
+  font-family: Copperlate, fantasy;
+  padding-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ringkasan {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.judul3 {
+  text-align: center;
+  font-family: Copperlate, fantasy;
+  padding-bottom: 10px;
 }

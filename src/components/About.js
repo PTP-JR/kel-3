@@ -34,8 +34,8 @@ function About(){
     return (
         <>
         <div>
-            <h1>  About  </h1>
-            <p> Kami dari kelompok 3 yang bertugas mengerjakan project tentang luar angkasa. Project ini terdiri dari Halaman List Data, Halaman About, dan Halaman Login.</p>
+            <h1 className= "judul2">  About  </h1>
+            <p className= "ringkasan"> Kami dari kelompok 3 yang bertugas mengerjakan project tentang luar angkasa. Project ini terdiri dari Halaman List Data, Halaman About, dan Halaman Login.</p>
             </div>
 
             <div id="profile">
