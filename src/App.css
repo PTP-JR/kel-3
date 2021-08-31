@@ -4,7 +4,9 @@
 
 #listdata {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
   background-image: url(./components/img/sampul1.png);
   padding-left: 30px;
   padding-top: 20px;

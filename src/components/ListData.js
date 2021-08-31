@@ -22,14 +22,13 @@ const ListData = () => {
                 <div id= "listdata" key={index}>
                  <Container>
                  <Row>
-                 <Col>
+                 <Col xs={6}>
                  <Card style={{ width: '18rem' }}>
                  <Card.Img variant="top" src={items.url}  alt="NASA" />
                  <Card.Body>
                      <Card.Title>Title : {items.title}</Card.Title><Card.Text>
                      <p>Copyright : {items.copyright}</p>
                     </Card.Text>
-                 {/* <Button variant="primary">Go somewhere</Button> */}
                 </Card.Body>
                 </Card> 
                 </Col>
