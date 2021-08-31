@@ -3,8 +3,12 @@
 }
 
 #listdata {
+  display: flex;
+  justify-content: space-around;
   background-image: url(./components/img/sampul1.png);
   padding-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -33,4 +37,11 @@
   text-align: center;
   font-family: Copperlate, fantasy;
   padding-bottom: 10px;
+}
+
+.Nama {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  font-family: "Times New Roman", Times, serif;
 }

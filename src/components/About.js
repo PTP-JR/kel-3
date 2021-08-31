@@ -4,7 +4,7 @@ import edi from './img/edi.jpeg';
 import rodhiyah from './img/rodhiyah.jpeg';
 import shella from './img/shella.jpeg';
 import shofi from './img/shofi.jpeg';
-
+import {Card} from 'react-bootstrap'
 
 function About(){
     const [profile] = useState([
@@ -41,10 +41,19 @@ function About(){
             <div id="profile">
                 {profile.map(profile =>(
                     <div key={profile.nama} className="Nama">
-                        < img src={profile.pict} width="190px" alt="profile" />
-                        <p style = {{fontWeight:'bold'}}>Nama : {profile.nama}</p>
+                        <Card style={{ width: '18rem' }}>
+                         <Card.Img variant="top" src={profile.pict} width="190px" alt="profile"/>
+                         <Card.Body>
+                            <Card.Title>Card Title</Card.Title>
+                            <Card.Text>
+                            <p style = {{fontWeight:'bold'}}>Nama : {profile.nama}</p>
                         <p style = {{fontWeight:'bold'}}>Alamat : {profile.alamat}</p>
                         <p style = {{fontWeight:'bold'}}>Tugas Project : {profile.project}</p>
+                            </Card.Text>
+                        </Card.Body>
+                        </Card>
+
+
                     </div>
                 ))}
 

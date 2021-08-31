@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Card , Container, Row, Col } from "react-bootstrap";
 
 const ListData = () => {
     const [nasa, setNasa] = useState([]);
@@ -14,13 +15,26 @@ const ListData = () => {
     }, [])
 
     return (
-        <div id= "listdata">
-            <h3 className= "judullist">Astronomy Picture</h3>            
+        <div>
+            <h3 className= "judullist">Astronomy Picture</h3> 
+        
             {nasa.map((items,index) => (
-                <div key={index}>
-                    <img src={items.url} width="150px" alt="NASA"/>
-                    <p>Title : {items.title}</p>
-                    <p>Copyright : {items.copyright}</p>
+                <div id= "listdata" key={index}>
+                 <Container>
+                 <Row>
+                 <Col>
+                 <Card style={{ width: '18rem' }}>
+                 <Card.Img variant="top" src={items.url}  alt="NASA" />
+                 <Card.Body>
+                     <Card.Title>Title : {items.title}</Card.Title><Card.Text>
+                     <p>Copyright : {items.copyright}</p>
+                    </Card.Text>
+                 {/* <Button variant="primary">Go somewhere</Button> */}
+                </Card.Body>
+                </Card> 
+                </Col>
+                </Row>
+                </Container>   
                 </div>
                 
             ))}

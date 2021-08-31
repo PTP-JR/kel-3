@@ -38,7 +38,7 @@ function Login() {
 
     if (dataLogin.email === user.email){
       if (dataLogin.password === user.password){
-        history.push("listData.js")
+        history.push("/")
       }
     } else {
       alert("email dan password salah")

@@ -13,7 +13,7 @@ function App() {
     <Container>
     <Navbar.Brand href="#home">Astronomy</Navbar.Brand>
     <Nav className="me-auto">
-      <Nav.Link href = "/" >List Data</Nav.Link>
+      <Nav.Link href = "/" >Home</Nav.Link>
       <Nav.Link href = "/about">About</Nav.Link>
       <Nav.Link href="/login">Login</Nav.Link>
     </Nav>
