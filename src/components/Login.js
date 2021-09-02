@@ -37,20 +37,35 @@ function Login() {
     event.preventDefault()
     console.log(dataLogin);
 
-    if (dataLogin.email === user.email){
-      if (dataLogin.password === user.password){
-        history.push("/about")
+    for (let i = 0; i < user.length; i++) {
+      if (user[i].email === dataLogin.email) {
+        if (user[i].password === dataLogin.password) {
+          history.push("/");
+          break;
+        } else {
+          alert("password salah, email bener");
+          break;
+        }
+      } else if (
+        user[i].email !== dataLogin.email &&
+        user[i].password !== dataLogin.password
+      ) {
+        if (user.length - 1 === i) {
+          alert("salah");
+          break;
+        } else {
+          continue;
+        }
       }
-    } else {
-      alert("email dan password salah")
     }
+  
   }
 
-
   return (
-    <div>
+    <div className= "login1">
       <h1 className= "judul3">Login</h1>
-      <Container>
+
+      <Container id="login">
     <Form>
    <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
@@ -59,7 +74,6 @@ function Login() {
       We'll never share your email with anyone else.
     </Form.Text>
   </Form.Group>
-
   <Form.Group className="mb-3" controlId="formBasicPassword">
     <Form.Label>Password</Form.Label>
     <Form.Control name="password" type="password" placeholder="Password" value={dataLogin.password} onChange={handleChange}/>

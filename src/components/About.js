@@ -33,20 +33,17 @@ function About(){
     ]);
     return (
         <>
-        <div>
+        <div id="profile" >
             <h1 className= "judul2">  About  </h1>
-            <p className= "ringkasan"> Kami dari kelompok 3 yang bertugas mengerjakan project tentang luar angkasa. Project ini terdiri dari Halaman List Data, Halaman About, dan Halaman Login.</p>
-            </div>
+            <p className= "ringkasan"><b>Kami dari kelompok 3 yang bertugas mengerjakan project tentang luar angkasa. Project ini terdiri dari Halaman List Data, Halaman About, dan Halaman Login.</b></p>
 
-            <div id="profile">
                 {profile.map(profile =>(
                     <div key={profile.nama} className="Nama">
                         <Card style={{ width: '18rem' }}>
-                         <Card.Img variant="top" src={profile.pict} width="190px" alt="profile"/>
-                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Text>
-                            <p style = {{fontWeight:'bold'}}>Nama : {profile.nama}</p>
+                         <Card.Img variant="top" src={profile.pict}  width="400px" height="400px" alt="profile"/>
+                         <Card.Body width= "150px" height="150px" >
+                        <Card.Text>
+                        <p style = {{fontWeight:'bold'}}>Nama : {profile.nama}</p>
                         <p style = {{fontWeight:'bold'}}>Alamat : {profile.alamat}</p>
                         <p style = {{fontWeight:'bold'}}>Tugas Project : {profile.project}</p>
                             </Card.Text>

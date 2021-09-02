@@ -15,18 +15,18 @@ const ListData = () => {
     }, [])
 
     return (
-        <div>
-            <h3 className= "judullist">Astronomy Picture</h3> 
+        <div className="home">
+            <h1 className= "judullist">Astronomy Picture</h1> 
         
             {nasa.map((items,index) => (
                 <div id= "listdata" key={index}>
                  <Container>
                  <Row>
-                 <Col xs={6}>
+                 <Col >
                  <Card style={{ width: '18rem' }}>
-                 <Card.Img variant="top" src={items.url}  alt="NASA" />
-                 <Card.Body>
-                     <Card.Title>Title : {items.title}</Card.Title><Card.Text>
+                 <Card.Img variant="top" src={items.url} width= "150px" height="150px" alt="NASA" />
+                 <Card.Body widht="200px" height= "200px">
+                     <Card.Title>{items.title}</Card.Title><Card.Text>
                      <p>Copyright : {items.copyright}</p>
                     </Card.Text>
                 </Card.Body>
