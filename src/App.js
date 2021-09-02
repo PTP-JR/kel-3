@@ -4,11 +4,11 @@ import ListData from './components/ListData';
 import About from './components/About';
 import Login from './components/Login';
 import { Switch, Route, Redirect} from 'react-router-dom';
-import {Container, Navbar, Nav} from 'react-bootstrap'
-import{useState} from 'react'
+import {Container, Navbar, Nav} from 'react-bootstrap';
+import {useState} from 'react';
 
 function App() {
-  const [login] = useState(true)
+  const [login] = useState(true);
   return (
     <div >
     <Navbar bg="dark" variant="dark">
@@ -24,8 +24,8 @@ function App() {
 
       <Switch>
         <Route exact path= "/">
-        { login? <ListData/> : <Redirect to = "/login"/>}
-          <ListData/>
+        { login ? <ListData/> : <Redirect to = "/login"/>}
+          {/* <ListData/> */}
         </Route>
         <Route path="/about">
           <About/>

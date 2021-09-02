@@ -34,8 +34,9 @@ function Login() {
   }
 
   const handleSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     console.log(dataLogin);
+    setUser(user);
 
     for (let i = 0; i < user.length; i++) {
       if (user[i].email === dataLogin.email) {
@@ -43,15 +44,13 @@ function Login() {
           history.push("/");
           break;
         } else {
-          alert("password salah, email bener");
+          alert("Password salah");
           break;
         }
-      } else if (
-        user[i].email !== dataLogin.email &&
-        user[i].password !== dataLogin.password
-      ) {
+      } 
+      else if (user[i].email !== dataLogin.email && user[i].password !== dataLogin.password) {
         if (user.length - 1 === i) {
-          alert("salah");
+          alert("Email dan Password salah");
           break;
         } else {
           continue;
