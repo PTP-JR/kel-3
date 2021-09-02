@@ -34,8 +34,9 @@ function Login() {
   }
 
   const handleSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     console.log(dataLogin);
+    setUser(user);
 
     for (let i = 0; i < user.length; i++) {
       if (user[i].email === dataLogin.email) {

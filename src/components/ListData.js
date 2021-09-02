@@ -27,7 +27,7 @@ const ListData = () => {
                  <Card.Img variant="top" src={items.url} width= "150px" height="150px" alt="NASA" />
                  <Card.Body widht="200px" height= "200px">
                      <Card.Title>{items.title}</Card.Title><Card.Text>
-                     <p>Copyright : {items.copyright}</p>
+                     <p>Date : {items.date}</p>
                     </Card.Text>
                 </Card.Body>
                 </Card> 
