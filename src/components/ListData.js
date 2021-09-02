@@ -14,6 +14,7 @@ const ListData = () => {
         fetchData();
     }, [])
 
+
     return (
         <div className="home">
             <h1 className= "judullist">Astronomy Picture</h1> 
@@ -24,7 +25,14 @@ const ListData = () => {
                  <Row>
                  <Col >
                  <Card style={{ width: '18rem' }}>
-                 <Card.Img variant="top" src={items.url} width= "150px" height="150px" alt="NASA" />
+                 <Card.Img 
+                    variant="top" 
+                    src={items.url} 
+                    type="image" 
+                    width= "150px" 
+                    height="150px" 
+                    alt="NASA" 
+                 />
                  <Card.Body widht="200px" height= "200px">
                      <Card.Title>{items.title}</Card.Title><Card.Text>
                      <p>Date : {items.date}</p>
