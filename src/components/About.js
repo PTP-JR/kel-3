@@ -4,7 +4,7 @@ import edi from './img/edi.jpeg';
 import rodhiyah from './img/rodhiyah.jpeg';
 import shella from './img/shella.jpeg';
 import shofi from './img/shofi.jpeg';
-
+import {Card} from 'react-bootstrap'
 
 function About(){
     const [profile] = useState([
@@ -33,18 +33,24 @@ function About(){
     ]);
     return (
         <>
-        <div>
+        <div id="profile" >
             <h1 className= "judul2">  About  </h1>
-            <p className= "ringkasan"> Kami dari kelompok 3 yang bertugas mengerjakan project tentang luar angkasa. Project ini terdiri dari Halaman List Data, Halaman About, dan Halaman Login.</p>
-            </div>
+            <p className= "ringkasan"><b>Kami dari kelompok 3 yang bertugas mengerjakan project tentang luar angkasa. Project ini terdiri dari Halaman List Data, Halaman About, dan Halaman Login.</b></p>
 
-            <div id="profile">
                 {profile.map(profile =>(
                     <div key={profile.nama} className="Nama">
-                        < img src={profile.pict} width="190px" alt="profile" />
+                        <Card style={{ width: '18rem' }}>
+                         <Card.Img variant="top" src={profile.pict}  width="400px" height="400px" alt="profile"/>
+                         <Card.Body width= "150px" height="150px" >
+                        <Card.Text>
                         <p style = {{fontWeight:'bold'}}>Nama : {profile.nama}</p>
                         <p style = {{fontWeight:'bold'}}>Alamat : {profile.alamat}</p>
                         <p style = {{fontWeight:'bold'}}>Tugas Project : {profile.project}</p>
+                            </Card.Text>
+                        </Card.Body>
+                        </Card>
+
+
                     </div>
                 ))}
 

@@ -3,17 +3,19 @@ import './App.css';
 import ListData from './components/ListData';
 import About from './components/About';
 import Login from './components/Login';
-import { Switch, Route} from 'react-router-dom';
+import { Switch, Route, Redirect} from 'react-router-dom';
 import {Container, Navbar, Nav} from 'react-bootstrap'
+import{useState} from 'react'
 
 function App() {
+  const [login] = useState(true)
   return (
-    <div>
+    <div >
     <Navbar bg="dark" variant="dark">
     <Container>
     <Navbar.Brand href="#home">Astronomy</Navbar.Brand>
     <Nav className="me-auto">
-      <Nav.Link href = "/" >List Data</Nav.Link>
+      <Nav.Link href = "/" >Home</Nav.Link>
       <Nav.Link href = "/about">About</Nav.Link>
       <Nav.Link href="/login">Login</Nav.Link>
     </Nav>
@@ -22,6 +24,7 @@ function App() {
 
       <Switch>
         <Route exact path= "/">
+        { login? <ListData/> : <Redirect to = "/login"/>}
           <ListData/>
         </Route>
         <Route path="/about">

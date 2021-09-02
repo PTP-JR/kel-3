@@ -2,35 +2,66 @@
   text-align: center;
 }
 
+.home {
+  background-image: url(./components/img/sampul2.png);
+  background-position: center;
+  background-size: 75%;
+}
+
 #listdata {
-  background-image: url(./components/img/sampul1.png);
-  padding-left: 30px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
   font-family: "Times New Roman", Times, serif;
+  display: inline-block;
 }
 
 .judullist {
   text-align: center;
   font-family: Copperlate, fantasy;
-  padding-bottom: 25px;
+  color: black;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
 }
 
 #profile {
-  padding-left: 25px;
+  background-image: url(./components/img/sampul.png);
+  background-size: 80%;
+}
+
+.Nama {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  background-size: cover;
 }
 
 .judul2 {
   text-align: center;
   font-family: Copperlate, fantasy;
-  padding-bottom: 10px;
+  background-color: white;
 }
 
 .ringkasan {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
+  color: whitesmoke;
 }
 
 .judul3 {
   text-align: center;
   font-family: Copperlate, fantasy;
-  padding-bottom: 10px;
+  background-color: whitesmoke;
+}
+
+#login {
+  justify-content: center;
+  background-size: cover;
+  padding-bottom: 200px;
+  background-image: url(./components/img/sampul2.png);
 }

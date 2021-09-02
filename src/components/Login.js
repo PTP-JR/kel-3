@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import {Form, Button, Container} from "react-bootstrap"
 
 function Login() {
   const history = useHistory()
@@ -20,10 +21,10 @@ function Login() {
   }
 ]);
 
-  const [dataLogin, setDataLogin] = useState({
+  const [dataLogin, setDataLogin] = useState([{
     email: "",
     password: ""
-  });
+  }]);
 
   const handleChange = (event) => {
     setDataLogin({
@@ -36,41 +37,56 @@ function Login() {
     event.preventDefault()
     console.log(dataLogin);
 
-    if (dataLogin.email === user.email){
-      if (dataLogin.password === user.password){
-        history.push("listData.js")
+    for (let i = 0; i < user.length; i++) {
+      if (user[i].email === dataLogin.email) {
+        if (user[i].password === dataLogin.password) {
+          history.push("/");
+          break;
+        } else {
+          alert("password salah, email bener");
+          break;
+        }
+      } else if (
+        user[i].email !== dataLogin.email &&
+        user[i].password !== dataLogin.password
+      ) {
+        if (user.length - 1 === i) {
+          alert("salah");
+          break;
+        } else {
+          continue;
+        }
       }
-    } else {
-      alert("email dan password salah")
     }
+  
   }
 
-
   return (
-    <div>
+    <div className= "login1">
       <h1 className= "judul3">Login</h1>
 
-      <form>
-        <input 
-          type="text" 
-          name="email" 
-          placeholder="email" 
-          id=""
-          value={dataLogin.email}
-          onChange={handleChange}
-          />
+      <Container id="login">
+    <Form>
+   <Form.Group className="mb-3" controlId="formBasicEmail">
+    <Form.Label>Email address</Form.Label>
+    <Form.Control name= "email" type="email" placeholder="Enter email" value={dataLogin.email} onChange={handleChange}/>
+    <Form.Text className="text-muted">
+      We'll never share your email with anyone else.
+    </Form.Text>
+  </Form.Group>
+  <Form.Group className="mb-3" controlId="formBasicPassword">
+    <Form.Label>Password</Form.Label>
+    <Form.Control name="password" type="password" placeholder="Password" value={dataLogin.password} onChange={handleChange}/>
+  </Form.Group>
+  <Form.Group className="mb-3" controlId="formBasicCheckbox">
+    <Form.Check type="checkbox" label="Check me out" />
+  </Form.Group>
+  <Button  onClick={handleSubmit} variant="primary" type="submit">
+    Login
+  </Button>
+</Form>
+</Container>
 
-        <input 
-          type="text" 
-          name="password" 
-          placeholder="password" 
-          id="" 
-          value={dataLogin.password}
-          onChange={handleChange}
-          />
-
-          <button onClick={handleSubmit}>Login</button>
-      </form>
     </div>
   );
 }
