@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Card , Container, Row, Col } from "react-bootstrap";
+import { CarouselItem, Carousel } from "react-bootstrap";
 
 const ListData = () => {
     const [nasa, setNasa] = useState([]);
@@ -14,39 +14,44 @@ const ListData = () => {
         fetchData();
     }, [])
 
+    const [slide, setSlide] = useState(0);
+    const handleSelect = (selectedSlide, e) => {
+        setSlide(selectedSlide)
+    }
 
     return (
+        <>
+        <h1 className="judullist">Astronomy Picture</h1> 
         <div className="home">
-            <h1 className= "judullist">Astronomy Picture</h1> 
-        
+            <Carousel autoPlay indicators={false} controls={true} activeIndex={slide} onSelect={handleSelect}>
             {nasa.map((items,index) => (
-                <div id= "listdata" key={index}>
-                 <Container>
-                 <Row>
-                 <Col >
-                 <Card style={{ width: '18rem' }}>
-                 <Card.Img 
-                    variant="top" 
-                    src={items.url} 
-                    type="image" 
-                    width= "150px" 
-                    height="150px" 
-                    alt="NASA" 
-                 />
-                 <Card.Body widht="200px" height= "200px">
-                     <Card.Title>{items.title}</Card.Title><Card.Text>
-                     <p>Date : {items.date}</p>
-                    </Card.Text>
-                </Card.Body>
-                </Card> 
-                </Col>
-                </Row>
-                </Container>   
-                </div>
-                
+            
+                <CarouselItem key={index}>
+                    <img src={items.hdurl} 
+                        alt={items.title} 
+                        height={400} 
+                        className="container-fluid"
+                    />
+                    <div className="container-fluid" style={{textAlign:"center"}}>
+                        <label><b>Title :</b> {items.title}</label>
+                    </div>
+                    <div className="container-fluid" style={{textAlign:"center"}}>
+                        <label><b>Date :</b> {items.date}</label>
+                    </div>
+                    <div className="container-fluid" style={{textAlign:"center"}}>
+                        <label><b>Copyright :</b> {items.copyright}</label>
+                    </div>
+                    <hr/>
+                    <div className="container-fluid" style={{textAlign:"justify"}}>
+                        <p><b>Description :</b> {items.description}</p>
+                    </div>
+                </CarouselItem>
+            
             ))}
-
+            </Carousel>
         </div>
+        </>
+        
     )
 }
 
