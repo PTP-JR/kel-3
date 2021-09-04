@@ -8,7 +8,7 @@ const ListData = () => {
         const fetchData = async () => {
             const response = await fetch("https://apodapi.herokuapp.com/api/?count=20");
             const data = await response.json();
-            console.log (data);
+            // console.log (data);
             setNasa(data);
         };
         fetchData();
@@ -24,8 +24,7 @@ const ListData = () => {
         <h1 className="judullist">Astronomy Picture</h1> 
         <div className="home">
             <Carousel autoPlay indicators={false} controls={true} activeIndex={slide} onSelect={handleSelect}>
-            {nasa.map((items,index) => (
-            
+            {nasa.map((items,index) => (            
                 <CarouselItem key={index}>
                     <img src={items.hdurl} 
                         alt={items.title} 

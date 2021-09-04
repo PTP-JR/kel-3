@@ -6,7 +6,6 @@
   background-image: url(./components/img/sampul2.png);
   background-size: cover;
   padding-top: 10px;
-  /* background-color: rgb(156, 156, 156); */
 }
 
 .home img {
@@ -32,7 +31,7 @@
 }
 
 #profile {
-  background-image: url(./components/img/sampul.png);
+  background-image: url(./components/img/sampul4.png);
   background-size: 80%;
 }
 
@@ -68,5 +67,5 @@
   justify-content: center;
   background-size: cover;
   padding-bottom: 200px;
-  background-image: url(./components/img/sampul2.png);
+  background-image: url(./components/img/sampul5.png);
 }
