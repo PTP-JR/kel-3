@@ -8,12 +8,12 @@ import {Container, Navbar, Nav} from 'react-bootstrap';
 import {useState} from 'react';
 
 function App() {
-  const [login] = useState(false);
+  const [login] = useState(true);
   return (
     <div >
     <Navbar bg="dark" variant="dark">
     <Container>
-    <Navbar.Brand href="#home">Astronomy</Navbar.Brand>
+    <Navbar.Brand href="/">Astronomy</Navbar.Brand>
     <Nav className="me-auto">
       <Nav.Link href = "/" >Home</Nav.Link>
       <Nav.Link href = "/about">About</Nav.Link>
@@ -28,6 +28,7 @@ function App() {
           {/* <ListData/> */}
         </Route>
         <Route path="/about">
+        { login ? <Redirect to = "/login"/> : <ListData/> }
           <About/>
         </Route>
         <Route path="/login">
