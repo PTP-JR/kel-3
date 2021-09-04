@@ -4,8 +4,7 @@
 
 .home {
   background-image: url(./components/img/sampul2.png);
-  background-position: center;
-  background-size: 75%;
+  background-size: cover;
 }
 
 #listdata {
@@ -27,8 +26,8 @@
 }
 
 #profile {
-  background-image: url(./components/img/sampul.png);
-  background-size: 80%;
+  background-image: url(./components/img/sampul4.png);
+  background-size: auto;
 }
 
 .Nama {
@@ -38,19 +37,21 @@
   padding: 20px;
   font-family: "Times New Roman", Times, serif;
   display: inline-block;
-  background-size: cover;
 }
 
 .judul2 {
   text-align: center;
   font-family: Copperlate, fantasy;
   background-color: white;
+  color: black;
 }
 
 .ringkasan {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
   color: whitesmoke;
+  background-color: cadetblue;
+  background-size: 10px;
 }
 
 .judul3 {
@@ -63,5 +64,6 @@
   justify-content: center;
   background-size: cover;
   padding-bottom: 200px;
-  background-image: url(./components/img/sampul2.png);
+  color: azure;
+  background-image: url(./components/img/sampul5.png);
 }
