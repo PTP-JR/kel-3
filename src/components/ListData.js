@@ -26,7 +26,7 @@ const ListData = () => {
             <Carousel autoPlay indicators={false} controls={true} activeIndex={slide} onSelect={handleSelect}>
             {nasa.map((items,index) => (            
                 <CarouselItem key={index}>
-                    <img src={items.hdurl} 
+                    <img src={items.url} 
                         alt={items.title} 
                         height={400} 
                         className="container-fluid"
