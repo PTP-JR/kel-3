@@ -8,7 +8,7 @@ import {Container, Navbar, Nav} from 'react-bootstrap';
 import {useState} from 'react';
 
 function App() {
-  const [login] = useState(true);
+  const [login] = useState(false);
   return (
     <div >
     <Navbar bg="dark" variant="dark">
@@ -24,7 +24,7 @@ function App() {
 
       <Switch>
         <Route exact path= "/">
-        { login ? <ListData/> : <Redirect to = "/login"/>}
+        { login ? <Redirect to = "/login"/> : <ListData/> }
           {/* <ListData/> */}
         </Route>
         <Route path="/about">

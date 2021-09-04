@@ -52,41 +52,52 @@ function Login() {
         if (user.length - 1 === i) {
           alert("Email dan Password salah");
           break;
-        } else {
-          continue;
-        }
+        } 
+        // else {
+        //   continue;
+        // }
+      }
+      else if (user[i].email !== dataLogin.email && user[i].password === dataLogin.password) {
+        if (user.length - 1 === i) {
+          alert("Email salah");
+          break;
+        } 
+        // else {
+        //   continue;
+        // }
       }
     }
   
   }
 
   return (
-    <div className= "login1">
+    <>
       <h1 className= "judul3">Login</h1>
+      <div className= "login1">
 
-      <Container id="login">
-    <Form>
-   <Form.Group className="mb-3" controlId="formBasicEmail">
-    <Form.Label>Email address</Form.Label>
-    <Form.Control name= "email" type="email" placeholder="Enter email" value={dataLogin.email} onChange={handleChange}/>
-    <Form.Text className="text-muted">
-      We'll never share your email with anyone else.
-    </Form.Text>
-  </Form.Group>
-  <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Label>Password</Form.Label>
-    <Form.Control name="password" type="password" placeholder="Password" value={dataLogin.password} onChange={handleChange}/>
-  </Form.Group>
-  <Form.Group className="mb-3" controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Check me out" />
-  </Form.Group>
-  <Button  onClick={handleSubmit} variant="primary" type="submit">
-    Login
-  </Button>
-</Form>
-</Container>
-
-    </div>
+        <Container id="login">
+        <Form>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control name= "email" type="email" placeholder="Enter email" value={dataLogin.email} onChange={handleChange}/>
+            <Form.Text className="text-muted">
+              We'll never share your email with anyone else.
+            </Form.Text>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control name="password" type="password" placeholder="Password" value={dataLogin.password} onChange={handleChange}/>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Form.Check type="checkbox" label="Check me out" />
+          </Form.Group>
+          <Button  onClick={handleSubmit} variant="primary" type="submit">
+            Login
+          </Button>
+        </Form>
+        </Container>
+      </div>
+    </>
   );
 }
 

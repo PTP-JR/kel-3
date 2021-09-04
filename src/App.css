@@ -51,10 +51,15 @@
   background-color: white;
 }
 
+.login1 {
+  padding-top: 10px;
+}
+
 .ringkasan {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
   color: whitesmoke;
+  padding-top: 20px;
 }
 
 .judul3 {
@@ -66,6 +71,10 @@
 #login {
   justify-content: center;
   background-size: cover;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 200px;
+  color: azure;
   background-image: url(./components/img/sampul5.png);
 }

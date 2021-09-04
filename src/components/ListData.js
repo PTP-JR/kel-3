@@ -23,13 +23,19 @@ const ListData = () => {
         <>
         <h1 className="judullist">Astronomy Picture</h1> 
         <div className="home">
-            <Carousel autoPlay indicators={false} controls={true} activeIndex={slide} onSelect={handleSelect}>
+            <Carousel autoPlay 
+            indicators={false} 
+            controls={true} 
+            activeIndex={slide} 
+            onSelect={handleSelect}
+            interval={10000}
+            >
             {nasa.map((items,index) => (            
                 <CarouselItem key={index}>
-                    <img src={items.hdurl} 
+                    <img src={items.url} 
                         alt={items.title} 
                         height={400} 
-                        className="container-fluid"
+                        className="container-fluid d-block w-100"
                     />
                     <div className="container-fluid" style={{textAlign:"center"}}>
                         <label><b>Title :</b> {items.title}</label>
