@@ -33,8 +33,8 @@ function About(){
     ]);
     return (
         <>
+        <h1 className= "judul2">  About  </h1>
         <div id="profile" >
-            <h1 className= "judul2">  About  </h1>
             <p className= "ringkasan"><b>Kami dari kelompok 3 yang bertugas mengerjakan project tentang luar angkasa. Project ini terdiri dari Halaman List Data, Halaman About, dan Halaman Login.</b></p>
 
                 {profile.map(profile =>(
