@@ -19,6 +19,7 @@ const ListData = () => {
         setSlide(selectedSlide)
     }
 
+
     return (
         <>
         <h1 className="judullist">Astronomy Picture</h1> 

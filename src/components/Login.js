@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import {Form, Button, Container} from "react-bootstrap"
+import { Form, Button, Container } from "react-bootstrap";
 
 function Login() {
   const history = useHistory()
@@ -41,7 +41,7 @@ function Login() {
     for (let i = 0; i < user.length; i++) {
       if (user[i].email === dataLogin.email) {
         if (user[i].password === dataLogin.password) {
-          history.push("/");
+          history.push("/home");
           break;
         } else {
           alert("Password salah");

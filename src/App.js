@@ -3,19 +3,21 @@ import './App.css';
 import ListData from './components/ListData';
 import About from './components/About';
 import Login from './components/Login';
-import { Switch, Route, Redirect} from 'react-router-dom';
+import { Switch, Route} from 'react-router-dom';
 import {Container, Navbar, Nav} from 'react-bootstrap';
-import {useState} from 'react';
+// import { Redirect } from "react-router-dom";
+// import {useState} from 'react';
 
 function App() {
-  const [login] = useState(true);
+  // const login = useState(false);
+
   return (
     <div >
     <Navbar bg="dark" variant="dark">
     <Container>
-    <Navbar.Brand href="/">Astronomy</Navbar.Brand>
+    <Navbar.Brand href="#">Astronomy</Navbar.Brand>
     <Nav className="me-auto">
-        <Nav.Link href = "/" >Home</Nav.Link>
+        <Nav.Link href = "/home" >Home</Nav.Link>
         <Nav.Link href = "/about">About</Nav.Link>
         <Nav.Link href ="/login">Login</Nav.Link>      
     </Nav>
@@ -24,13 +26,16 @@ function App() {
 
       <Switch>
         <Route exact path= "/">
-        { login ? <ListData/> : <Redirect to = "/login"/> }
-          {/* <ListData/>  */}
+        {/* {login ? <Redirect to = "/login"/> : <Redirect to = "/home"/>} */}
+          <Login/>
         </Route>
-        <Route path="/about">
+        <Route exact path="/home">
+          <ListData/>
+        </Route>
+        <Route exact path="/about">
           <About/>
         </Route>
-        <Route path="/login">
+        <Route exact path="/login">
           <Login/>
         </Route>
       </Switch>

@@ -78,3 +78,7 @@
   color: azure;
   background-image: url(./components/img/sampul5.png);
 }
+
+.setNav {
+  text-align: right;
+}
