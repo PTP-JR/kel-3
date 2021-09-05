@@ -15,20 +15,19 @@ function App() {
     <Container>
     <Navbar.Brand href="/">Astronomy</Navbar.Brand>
     <Nav className="me-auto">
-      <Nav.Link href = "/" >Home</Nav.Link>
-      <Nav.Link href = "/about">About</Nav.Link>
-      <Nav.Link href="/login">Login</Nav.Link>
+        <Nav.Link href = "/" >Home</Nav.Link>
+        <Nav.Link href = "/about">About</Nav.Link>
+        <Nav.Link href ="/login">Login</Nav.Link>      
     </Nav>
     </Container>
   </Navbar>
 
       <Switch>
         <Route exact path= "/">
-        { login ? <Redirect to = "/login"/> : <ListData/> }
-          {/* <ListData/> */}
+        { login ? <ListData/> : <Redirect to = "/login"/> }
+          {/* <ListData/>  */}
         </Route>
         <Route path="/about">
-        { login ? <Redirect to = "/login"/> : <ListData/> }
           <About/>
         </Route>
         <Route path="/login">
