@@ -4,7 +4,7 @@ import edi from './img/edi.jpeg';
 import rodhiyah from './img/rodhiyah.jpeg';
 import shella from './img/shella.jpeg';
 import shofi from './img/shofi.jpeg';
-import {Card} from 'react-bootstrap'
+import {Card} from 'react-bootstrap';
 
 function About(){
     const [profile] = useState([
@@ -31,6 +31,7 @@ function About(){
             
         }
     ]);
+
     return (
         <>
         <h1 className= "judul2">  About  </h1>
