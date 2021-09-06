@@ -18,6 +18,9 @@ function Login() {
   },{
     email: "shella.batrisyia.lupita@gmail.com",
     password: "123"
+  },{
+    email: "user1",
+    password: "user1"
   }
 ]);
 
